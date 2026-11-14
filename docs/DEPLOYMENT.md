@@ -14,7 +14,8 @@
 ## New resources
 
 - Local source: `/Users/fayasahamed/Documents/Projects/AqlVEST/aqlvest`.
-- Vercel project: `aqlvest`, `prj_drK2ytK3x9BW87nliMcZHjbcgIe5`.
+- Active Vercel project: `aqlvest-website`, `prj_qbqksdCJ87w2rJVM4IbtPsx5YUyv`, linked to `fayasahamedcm/aqlvest`.
+- An empty unlinked `aqlvest` project (`prj_drK2ytK3x9BW87nliMcZHjbcgIe5`) was created during setup. It has no deployment or domain and is retained pending explicit cleanup approval.
 - Next.js framework, `npm ci` install, `npm run build` production build.
 
 ## Migration sequence
@@ -32,4 +33,20 @@ Move the two domain assignments back to the original project and restore the rec
 
 ## Actual completion record
 
-Pending preview verification and migration. Update this section with the real deployment URL, commit, build status, migration result, and DNS/HTTPS checks; do not treat this runbook as evidence that those steps have occurred.
+Completed on 14 November 2026:
+
+- Repository: https://github.com/fayasahamedcm/aqlvest (created by owner as public).
+- Verified application commit: `77ae3eb93e4cac063075da94d007c2bd44e2841f`.
+- Verified standalone deployment: `dpl_2LwgnaxbZvJN5fUsHwvb4uiFUChJ`, READY, https://aqlvest-website-pe4r130ek-cmfayasahamed-3679s-projects.vercel.app.
+- The independent project deployed `main` as its own Production environment before any custom domain was attached. Its unique Vercel URL was used as the preview. All 21 content routes returned HTTP 200 before migration.
+- The two custom domains were moved through Vercel's signed-in dashboard. The existing `aqlvest-prototype.vercel.app` redirect followed the apex automatically and still redirects to the apex with 307.
+- `aqlvest.com` is attached to the new project's Production environment, verified, with no redirect.
+- `www.aqlvest.com` is attached to the new project, verified, and redirects to `aqlvest.com` with 308.
+- HTTP on both hosts returns 308 to HTTPS. HTTPS apex returns 200 and HSTS `max-age=63072000`. HTTPS www returns 308 to the apex, preserving the tested `/learn?check=1` path and query. Certificate checks used the system trust store; validation was not disabled.
+- Existing external nameservers, apex A record `216.198.79.1`, and www CNAME `df63a4457018661c.vercel-dns-017.com.` remain unchanged. The recommendation shown by Vercel for the new project's apex may differ; no DNS edit was made or needed.
+- The full integration suite passed against the public production domain after migration. Browser checks covered production mobile navigation, Escape key handling, and contact draft preparation.
+- Old project, deployments, local folders, GitHub repository, and databases were not deleted. The old project has no custom domain assignments after migration.
+
+Documentation-only commits after the application commit do not alter the verified application source. Vercel may build them automatically; check the project dashboard for the latest deployment.
+
+The direct saved-token API fallback was rejected by automatic approval review as credential probing. Migration instead used the normal authenticated dashboard after the owner signed in; no token was copied into the source or deployment.

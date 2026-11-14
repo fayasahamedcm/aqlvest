@@ -1,0 +1,62 @@
+[
+  {
+    "file": "lighthouse-production-mobile.report.json",
+    "url": "https://aqlvest.com/",
+    "date": "2026-11-14T11:37:39.049Z",
+    "scores": {
+      "performance": 99,
+      "accessibility": 100,
+      "best-practices": 100,
+      "seo": 100,
+      "agentic-browsing": 100
+    },
+    "metrics": {
+      "first-contentful-paint": {
+        "numericValue": 938.469,
+        "displayValue": "0.9 s"
+      },
+      "largest-contentful-paint": {
+        "numericValue": 938.469,
+        "displayValue": "0.9 s"
+      },
+      "total-blocking-time": {
+        "numericValue": 149,
+        "displayValue": "150 ms"
+      },
+      "cumulative-layout-shift": {
+        "numericValue": 0,
+        "displayValue": "0"
+      }
+    }
+  },
+  {
+    "file": "lighthouse-production-desktop.report.json",
+    "url": "https://aqlvest.com/",
+    "date": "2026-11-14T11:38:41.862Z",
+    "scores": {
+      "performance": 100,
+      "accessibility": 100,
+      "best-practices": 100,
+      "seo": 100,
+      "agentic-browsing": 100
+    },
+    "metrics": {
+      "first-contentful-paint": {
+        "numericValue": 332.028,
+        "displayValue": "0.3 s"
+      },
+      "largest-contentful-paint": {
+        "numericValue": 332.028,
+        "displayValue": "0.3 s"
+      },
+      "total-blocking-time": {
+        "numericValue": 0,
+        "displayValue": "0 ms"
+      },
+      "cumulative-layout-shift": {
+        "numericValue": 0,
+        "displayValue": "0"
+      }
+    }
+  }
+]

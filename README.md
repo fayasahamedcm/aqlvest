@@ -48,7 +48,7 @@ The contact form validates locally, prepares a `mailto:` draft, and offers a cop
 
 ## Deployment
 
-Use the independent `aqlvest` Vercel project. Verify a preview before promotion or domain migration. The canonical domain is `https://aqlvest.com`; `www` should redirect to the apex. See `docs/DEPLOYMENT.md` for the migration and rollback record. Never remove legacy resources without the owner's explicit deletion approval.
+Use the independent `aqlvest-website` Vercel project. Verify a preview before promotion or domain migration. The canonical domain is `https://aqlvest.com`; `www` should redirect to the apex. See `docs/DEPLOYMENT.md` for the migration and rollback record. Never remove legacy resources without the owner's explicit deletion approval.
 
 ## Ownership and legal content
 
