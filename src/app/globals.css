@@ -3658,3 +3658,24 @@ details > p {
     animation: none;
   }
 }
+
+@media (max-width: 375px) {
+  .hero-copy h1 {
+    font-size: 40px;
+  }
+  .hero-copy h1 em {
+    font-size: 0.77em;
+  }
+  .hero-actions {
+    gap: 14px;
+  }
+  .hero-actions .button {
+    font-size: 11px;
+    padding-inline: 13px;
+    gap: 14px;
+  }
+  .hero-actions .text-link {
+    font-size: 9px;
+    gap: 6px;
+  }
+}

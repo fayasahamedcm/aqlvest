@@ -18,8 +18,8 @@ export function Brand({
       href="/"
       className={`brand ${light ? "brand-light" : ""}`}
       onClick={onNavigate}
-      aria-label="AqlVest home — Knowledge. Principles."
     >
+      <span className="sr-only">Home: </span>
       <Image
         src="/brand/original-logo.png"
         width={34}
