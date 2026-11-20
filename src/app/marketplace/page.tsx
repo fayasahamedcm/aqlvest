@@ -3,8 +3,8 @@ import { products } from "@/lib/content";
 import { pageMeta } from "@/lib/site";
 import { FileSpreadsheet } from "@/components/icons";
 export const metadata = pageMeta(
-  "Digital workbooks & research resources",
-  "Discover upcoming affordable Excel workbooks, portfolio planning templates, and downloadable investment research resources from AqlVest.",
+  "Halal Investing Excel Tools & Shariah Research Workbooks",
+  "Preview AqlVest Excel tools for halal investing: a Self Shariah Screener, India and US research dashboard, and IT-sector comparison workbooks. Coming soon.",
   "/marketplace",
 );
 export default function Marketplace() {
@@ -12,28 +12,30 @@ export default function Marketplace() {
     <>
       <PageIntro
         label="The marketplace / Coming soon"
-        title="A little structure. A lot of possibility."
+        title="Your research. A clearer framework."
       >
-        Thoughtfully planned Excel workbooks and downloadable resources to help
-        turn your learning into an organised research practice. Designed with
-        accessibility and affordability in mind.
+        A marketplace for downloadable Excel tools that support your halal
+        investing research. Explore the AqlVest workbooks in development, from
+        manual Shariah screening to fundamental analysis and portfolio planning.
       </PageIntro>
       <section className="container catalogue-section">
         <div className="notice">
           <FileSpreadsheet size={23} />
           <p>
-            <strong>Our shelves are taking shape.</strong> All resources are
-            coming soon. Downloads and purchases are not available. Formats,
-            compatibility, licensing, and pricing will be confirmed before
-            release.
+            <strong>In development for the AqlVest marketplace.</strong> Our
+            official platform launch begins in Ramadan 2027, insha Allah.
+            Products will be released progressively after review; downloads and
+            purchases are not available yet. Compatibility, licensing, pricing,
+            and individual release dates will be confirmed before publication.
           </p>
         </div>
         <div className="product-grid">
-          {products
-            .filter((p) => p.type === "workbook")
-            .map((p) => (
-              <ProductCard key={p.slug} product={p} />
-            ))}
+          {[
+            ...products.slice(-3),
+            ...products.slice(0, -3).filter((p) => p.type === "workbook"),
+          ].map((p) => (
+            <ProductCard key={p.slug} product={p} />
+          ))}
         </div>
       </section>
       <section className="container resource-promise">

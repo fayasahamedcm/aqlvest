@@ -18,6 +18,31 @@ const paths = [
   ),
 ];
 
+test(
+  "Ramadan invitation, Academy previews, and search descriptions are published coherently",
+  { skip: !base },
+  async () => {
+    const home = await (await fetch(new URL("/", base))).text();
+    const learn = await (await fetch(new URL("/learn", base))).text();
+    const market = await (await fetch(new URL("/marketplace", base))).text();
+    assert.match(home, /Learn Halal Investing &amp; Trading/);
+    for (const html of [home, learn, market]) {
+      assert.match(html, /Ramadan 2027/);
+      assert.match(html, /insha Allah/);
+    }
+    assert.match(learn, /id="academy"/);
+    assert.match(learn, /What Is a Stock/);
+    assert.match(learn, /not available here yet/);
+    assert.doesNotMatch(learn, /<video|<iframe/);
+    for (const slug of [
+      "self-shariah-screener",
+      "shariah-stock-research-dashboard",
+      "it-shariah-comparison",
+    ])
+      assert.match(market, new RegExp(`/marketplace/${slug}`));
+  },
+);
+
 test("published routes are distinct and content references are secure", () => {
   assert.equal(new Set(paths).size, paths.length);
   for (const a of articles) {

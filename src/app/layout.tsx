@@ -3,7 +3,9 @@ import localFont from "next/font/local";
 import { Suspense } from "react";
 import { Header, Footer } from "@/components/shell";
 import { site } from "@/lib/site";
+import { ScrollReveal } from "@/components/scroll-reveal";
 import "./globals.css";
+import "./enhancements.css";
 const sans = localFont({
   src: [
     { path: "../../public/brand/dm-sans-regular.ttf", weight: "400" },
@@ -14,7 +16,7 @@ const sans = localFont({
 });
 export const metadata: Metadata = {
   metadataBase: new URL(site.url),
-  title: { default: `AqlVest — ${site.tagline}`, template: "%s | AqlVest" },
+  title: { default: site.title, template: "%s | AqlVest" },
   description: site.description,
   applicationName: site.name,
   alternates: { canonical: "/" },
@@ -22,14 +24,14 @@ export const metadata: Metadata = {
     type: "website",
     locale: "en_US",
     siteName: site.name,
-    title: site.tagline,
+    title: site.title,
     description: site.description,
     url: "/",
     images: [{ url: "/opengraph-image", width: 1200, height: 630 }],
   },
   twitter: {
     card: "summary_large_image",
-    title: site.tagline,
+    title: site.title,
     description: site.description,
     images: ["/opengraph-image"],
   },
@@ -57,6 +59,9 @@ export default function RootLayout({
         </Suspense>
         <main id="main">{children}</main>
         <Footer />
+        <Suspense>
+          <ScrollReveal />
+        </Suspense>
       </body>
     </html>
   );

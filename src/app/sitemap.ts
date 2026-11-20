@@ -19,7 +19,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     ),
   ].map((path) => ({
     url: `${site.url}${path}`,
-    lastModified: new Date("2026-11-14T00:00:00Z"),
+    lastModified: new Date("2026-11-20T00:00:00Z"),
     changeFrequency: path === "" ? "monthly" : "monthly",
     priority: path === "" ? 1 : path.split("/").length === 2 ? 0.8 : 0.6,
   }));

@@ -1,10 +1,11 @@
 import { Callout, PageIntro, ProductCard } from "@/components/ui";
 import { products } from "@/lib/content";
 import { pageMeta } from "@/lib/site";
+import Link from "next/link";
 import { CircleHelp } from "@/components/icons";
 export const metadata = pageMeta(
-  "Tools for thoughtful investing",
-  "Preview upcoming Shariah screening education tools, portfolio trackers, investment calculators, and financial analysis resources.",
+  "Shariah Screening & Halal Investment Tools",
+  "Explore upcoming tools for halal investing, Shariah screening, portfolio planning and financial analysis. Discover AqlVest’s downloadable Excel research workbooks.",
   "/tools",
 );
 export default function Tools() {
@@ -33,6 +34,17 @@ export default function Tools() {
               <ProductCard key={p.slug} product={p} />
             ))}
         </div>
+      </section>
+      <section className="container tools-marketplace-link">
+        <h2>Looking for the Excel workbooks?</h2>
+        <p>
+          Our Self Shariah Screener, India &amp; US Stock Research Dashboard,
+          and IT Sector Shariah Research Workbook are being prepared for the
+          marketplace.
+        </p>
+        <Link href="/marketplace" className="text-link">
+          Preview the Excel collection →
+        </Link>
       </section>
       <Callout
         title="A tool you wish existed?"

@@ -288,4 +288,49 @@ export const products: Product[] = [
       "Periodic reflection templates",
     ],
   },
+  {
+    slug: "self-shariah-screener",
+    name: "AqlVest Self Shariah Screener",
+    category: "Excel / Manual screening",
+    description:
+      "Research one company at a time. Enter company information from annual reports and explore how different Shariah screening profiles assess the inputs.",
+    type: "workbook",
+    preview: "screen",
+    includes: [
+      "A guided input sheet explaining the information needed and where to look in annual reports",
+      "A comparison dashboard with criteria, ratios, and reasons under named screening profiles",
+      "Protected calculation sheets, methodology notes, and a practical user guide",
+      "Clear flags for uncertain business activities and matters requiring qualified review",
+    ],
+  },
+  {
+    slug: "shariah-stock-research-dashboard",
+    name: "India & US Stock Research Dashboard",
+    category: "Excel / Investment research",
+    description:
+      "An upcoming Excel 365 research workspace combining fundamental-analysis filters, dated company information, and separately identified Shariah evidence for India and US stocks.",
+    type: "workbook",
+    preview: "analysis",
+    includes: [
+      "Combined filters for valuation, profitability, leverage, and other available financial ratios",
+      "Dedicated India and US research views with sources and data dates",
+      "Separate views for financial analysis, screening evidence, and fund inclusion",
+      "Clear data-freshness and missing-information indicators; no promise of live or automatic financial data",
+    ],
+  },
+  {
+    slug: "it-shariah-comparison",
+    name: "IT Sector Shariah Research Workbook",
+    category: "Excel / Sector research",
+    description:
+      "A forthcoming NIFTY IT and S&P 500 IT research workbook bringing company research, selected Islamic fund and index holdings, portfolio weights, and source dates together.",
+    type: "workbook",
+    preview: "workbook",
+    includes: [
+      "Separate NIFTY IT and S&P 500 IT company research sheets",
+      "Selected ETF, mutual fund, and Shariah index holdings with published weights where available",
+      "An evidence index recording sources, dates, coverage, and verification limitations",
+      "Fund inclusion kept distinct from an independent Shariah screening conclusion",
+    ],
+  },
 ];

@@ -20,7 +20,7 @@ export function ProductDetail({ product: p }: { product: Product }) {
             </div>
             <h1>{p.name}</h1>
             <p className="intro-copy">{p.description}</p>
-            <h2>What we’re exploring</h2>
+            <h2>What’s being developed</h2>
             <ul className="feature-list">
               {p.includes.map((i) => (
                 <li key={i}>
@@ -30,7 +30,9 @@ export function ProductDetail({ product: p }: { product: Product }) {
               ))}
             </ul>
             <p className="detail-note">
-              This is a planned concept. Scope and availability may change.{" "}
+              Coming soon. Scope and availability may change. Our official
+              platform launch begins in Ramadan 2027, insha Allah; individual
+              products will be released progressively after review.{" "}
               {p.type === "workbook"
                 ? "Format, compatibility, licensing, and pricing will be published at release."
                 : "No calculations, screening results, or live financial data are available."}

@@ -1,5 +1,6 @@
 import { ImageResponse } from "next/og";
-export const alt = "AqlVest — Investing with Knowledge. Guided by Principles.";
+export const alt =
+  "AqlVest — Learn Halal Investing & Trading. Ramadan 2027, insha Allah.";
 export const size = { width: 1200, height: 630 };
 export const contentType = "image/png";
 export default function Image() {
@@ -24,12 +25,12 @@ export default function Image() {
         style={{
           display: "flex",
           flexDirection: "column",
-          fontSize: 70,
+          fontSize: 66,
           letterSpacing: -3,
         }}
       >
-        <span>Investing with Knowledge.</span>
-        <span style={{ color: "#70d4b2" }}>Guided by Principles.</span>
+        <span>Learn halal investing.</span>
+        <span style={{ color: "#70d4b2" }}>From basics to advanced.</span>
       </div>
       <div
         style={{
@@ -39,7 +40,7 @@ export default function Image() {
           fontSize: 22,
         }}
       >
-        <span>ISLAMIC INVESTMENT EDUCATION & DIGITAL RESOURCES</span>
+        <span>RAMADAN 2027, INSHA ALLAH · EDUCATION & EXCEL TOOLS</span>
         <span>aqlvest.com</span>
       </div>
     </div>,

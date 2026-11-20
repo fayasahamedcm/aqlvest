@@ -18,6 +18,7 @@ import {
 } from "@/components/ui";
 import { articles, products } from "@/lib/content";
 import { site } from "@/lib/site";
+import { Academy, RamadanInvitation } from "@/components/academy";
 
 function HeroVisual() {
   return (
@@ -119,6 +120,13 @@ export default function Home() {
   const jsonLd = {
     "@context": "https://schema.org",
     "@type": "Organization",
+    knowsAbout: [
+      "Halal investing",
+      "Islamic investing",
+      "Shariah screening",
+      "Investment education",
+      "Trading education",
+    ],
     name: site.name,
     url: site.url,
     email: site.email,
@@ -134,26 +142,25 @@ export default function Home() {
       <section className="home-hero">
         <div className="container hero-grid">
           <div className="hero-copy">
-            <Link href="/about#roadmap" className="launch-pill">
-              <span />A new chapter. A thoughtful beginning.
+            <Link href="/learn#academy" className="launch-pill">
+              <span />
+              Official launch: Ramadan 2027, insha Allah
               <ArrowUpRight size={13} />
             </Link>
             <h1>
-              Investing with
+              Learn halal investing.
               <br />
-              knowledge.
-              <br />
-              <em>Guided by principles.</em>
+              <em>Grow with knowledge.</em>
             </h1>
             <p>
-              A clearer path to understanding Islamic investing. Build your
-              knowledge, explore your principles, and prepare to make more
-              informed decisions.
+              Halal investing and trading, taught from the basics to advanced
+              analysis. Build your understanding of Islamic investing, Shariah
+              screening, and a more disciplined approach to research.
             </p>
             <div className="hero-actions">
-              <ButtonLink href="/learn">Start learning</ButtonLink>
-              <Link href="/tools" className="text-link">
-                Explore what’s ahead <ArrowRight size={18} />
+              <ButtonLink href="/learn#academy">Explore the Academy</ButtonLink>
+              <Link href="/marketplace" className="text-link">
+                Preview Excel tools <ArrowRight size={18} />
               </Link>
             </div>
             <div className="hero-footnote">
@@ -179,6 +186,8 @@ export default function Home() {
           </div>
         </div>
       </section>
+      <RamadanInvitation />
+      <Academy compact />
       <section className="section container">
         <div className="section-heading">
           <div>
@@ -200,8 +209,8 @@ export default function Home() {
             {
               n: "01",
               icon: BookOpen,
-              title: "Learn the foundations",
-              text: "Clear, approachable guides to Islamic investing, financial literacy, and thoughtful research.",
+              title: "Learn, from the ground up",
+              text: "A planned video journey from stock market basics and Islamic investing principles to advanced analysis and trading discipline.",
               href: "/learn",
               link: "Explore the library",
             },
@@ -217,7 +226,7 @@ export default function Home() {
               n: "03",
               icon: FileSpreadsheet,
               title: "Put knowledge to work",
-              text: "Thoughtfully planned workbooks and resources to bring structure to your own research.",
+              text: "Upcoming downloadable Excel tools for manual Shariah screening, India and US stock research, and portfolio planning.",
               href: "/marketplace",
               link: "Discover the marketplace",
             },
@@ -261,7 +270,13 @@ export default function Home() {
             </div>
           </div>
           <div className="product-grid">
-            {[products[0], products[4], products[1]].map((p) => (
+            {[
+              products.find((p) => p.slug === "self-shariah-screener")!,
+              products.find(
+                (p) => p.slug === "shariah-stock-research-dashboard",
+              )!,
+              products.find((p) => p.slug === "it-shariah-comparison")!,
+            ].map((p) => (
               <ProductCard key={p.slug} product={p} />
             ))}
           </div>

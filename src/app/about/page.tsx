@@ -9,8 +9,8 @@ import {
 } from "@/components/ui";
 import { pageMeta, site } from "@/lib/site";
 export const metadata = pageMeta(
-  "About AqlVest",
-  "Discover AqlVest’s mission: accessible Islamic investment education, thoughtful digital resources, and a principled approach to financial understanding.",
+  "About AqlVest — Halal Investing Education",
+  "AqlVest teaches halal investing and trading from basics to advanced. Discover our Academy, upcoming Excel tools and Ramadan 2027 launch, insha Allah.",
   "/about",
 );
 export default function About() {
@@ -20,9 +20,9 @@ export default function About() {
         label="The AqlVest philosophy"
         title="Knowledge gives intention a direction."
       >
-        AqlVest is an Islamic investment education and digital products
-        platform. Our purpose is simple: make financial understanding more
-        accessible, without losing sight of principles.
+        AqlVest teaches halal investing and trading, from the basics to advanced
+        analysis. Our Academy and upcoming marketplace connect Islamic investing
+        education with practical downloadable Excel tools.
       </PageIntro>
       <section className="container about-story">
         <div className="about-emblem">
@@ -45,10 +45,10 @@ export default function About() {
             understanding of the decisions in front of you.
           </p>
           <p>
-            AqlVest 1.0 begins with introductory education and previews of
-            resources we’re developing. We’ll release more content, tools, and
-            digital products progressively, with their scope and limitations
-            made clear.
+            Our official launch begins in Ramadan 2027, insha Allah. We’re
+            preparing narrated English learning videos and practical Excel
+            workbooks, with more lessons and products released progressively.
+            Introductory written guides are available today.
           </p>
           <p>
             We’re an educational platform. We do not manage money, execute
@@ -96,8 +96,9 @@ export default function About() {
             Then a little more.
           </h2>
           <p>
-            We’ll publish availability when each release is ready. There are no
-            promised launch dates.
+            Begin learning halal investing with us from Ramadan 2027, insha
+            Allah. Lessons and products will follow progressively; individual
+            product dates and final features will be confirmed before release.
           </p>
           <ButtonLink href="/contact">Help shape what’s next</ButtonLink>
         </div>
@@ -117,10 +118,11 @@ export default function About() {
             <span className="roadmap-number">02</span>
             <div>
               <Status />
-              <h3>Practical digital resources</h3>
+              <h3>AqlVest Academy / Ramadan 2027</h3>
               <p>
-                Affordable workbooks, research journals, and guides to organise
-                your thinking.
+                Short English video lessons, from stock ownership and financial
+                foundations to Shariah screening, analysis, and trading
+                discipline.
               </p>
             </div>
           </li>
@@ -128,10 +130,10 @@ export default function About() {
             <span className="roadmap-number">03</span>
             <div>
               <Status />
-              <h3>Tools for deeper understanding</h3>
+              <h3>The Excel marketplace</h3>
               <p>
-                Calculators, portfolio organisation, and transparent screening
-                education tools.
+                Self Shariah screening, India and US stock research, IT-sector
+                comparisons, and portfolio workbooks, released progressively.
               </p>
             </div>
           </li>

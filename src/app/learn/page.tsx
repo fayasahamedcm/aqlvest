@@ -1,23 +1,28 @@
 import { LearningLibrary } from "@/components/learning-library";
 import { Callout, Eyebrow, PageIntro, Status } from "@/components/ui";
 import { pageMeta } from "@/lib/site";
+import { Academy, RamadanInvitation } from "@/components/academy";
 export const metadata = pageMeta(
-  "Learn Islamic investing",
-  "Explore introductory guides to Islamic investing, Shariah screening methodologies, financial foundations, and thoughtful trading principles.",
+  "Learn Halal Investing & Trading — AqlVest Academy",
+  "Learn halal investing from beginner to advanced. Explore Islamic investing guides, Shariah screening and upcoming AqlVest Academy videos from Ramadan 2027, insha Allah.",
   "/learn",
 );
 export default function Learn() {
   return (
     <>
       <PageIntro
-        label="The learning library"
-        title="Invest in your understanding."
+        label="Learn halal investing and trading"
+        title="Every confident step begins with understanding."
       >
-        Plain-language guides for a more thoughtful investment journey. Start
-        with the foundations, follow your curiosity, and take it one idea at a
-        time.
+        Start with the stock market basics. Progress into financial analysis,
+        Shariah screening, portfolio thinking, and trading principles. Our
+        official Academy launch begins in Ramadan 2027, insha Allah;
+        introductory written guides are available to explore today.
       </PageIntro>
-      <section className="container library-section">
+      <Academy />
+      <section id="library" className="container library-section">
+        <Eyebrow>Read a guide today</Eyebrow>
+        <h2 className="library-heading">Your learning library.</h2>
         <LearningLibrary />
       </section>
       <section className="container learning-next">
@@ -42,6 +47,7 @@ export default function Learn() {
           ))}
         </div>
       </section>
+      <RamadanInvitation />
       <Callout
         title="What would you like to understand next?"
         text="Help shape our learning library. We welcome your questions and topic suggestions."

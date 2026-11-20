@@ -52,6 +52,10 @@ export function Header() {
   }, [open]);
   return (
     <header className="site-header">
+      <Link href="/learn#academy" className="launch-strip">
+        Learn halal investing from Ramadan 2027, insha Allah{" "}
+        <ArrowUpRight size={15} />
+      </Link>
       <div className="container header-inner">
         <Brand onNavigate={() => setOpen(false)} />
         <nav aria-label="Main navigation" className="desktop-nav">
@@ -114,8 +118,8 @@ export function Footer() {
             <Brand light />
             <p>{site.tagline}</p>
             <p>
-              A thoughtful approach to Islamic investment education and digital
-              resources.
+              Learn halal investing and trading, from basics to advanced.
+              Official launch: Ramadan 2027, insha Allah.
             </p>
           </div>
           <div className="footer-links">
